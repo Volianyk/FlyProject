@@ -1,24 +1,15 @@
 package com.fly.project.repository;
 
 import com.fly.project.model.Flight;
-import com.fly.project.model.FlightDetails;
+import com.fly.project.repository.dataSource.FlightListDataSource;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class FlightScheduleRepository {
-    private List<Flight> flightList;
-
-    public FlightScheduleRepository() {
-       flightList=new ArrayList<>();
-       Flight flight=new Flight();
-       flight.setFlightDetails(FlightDetails.builder().departure("Lviv").arrival("Kyiv").minutes(60).build());
-       flight.setDepartureTime(LocalDateTime.MAX);
-       flightList.add(flight);
-    }
+    private List<Flight> flightList = new FlightListDataSource().getFlightList();
 
     private boolean isSameDay(LocalDateTime localDateTime, LocalDate localDate) {
         return localDateTime.getYear() == localDate.getYear() && localDateTime.getDayOfYear() == localDate.getDayOfYear();

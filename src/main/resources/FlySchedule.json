@@ -1,0 +1,34 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "flightDetails": {
+        "departure": "Ternopil",
+        "arrival": "Lviv",
+        "numberOfSeats": "25",
+        "minutes": "450"
+      },
+      "departureTime": "MAX"
+    },
+    {
+      "id": 2,
+      "flightDetails": {
+        "departure": "Lytsk",
+        "arrival": "Lviv",
+        "numberOfSeats": "285",
+        "minutes": "50"
+      },
+      "departureTime": "MAX"
+    },
+    {
+      "id": 3,
+      "flightDetails": {
+        "departure": "Dnipro",
+        "arrival": "Odesa",
+        "numberOfSeats": "47",
+        "minutes": "180"
+      },
+      "departureTime": "MAX"
+    }
+  ]
+}
