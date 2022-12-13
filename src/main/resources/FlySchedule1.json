@@ -1,18 +1,16 @@
-{
-  "id": 1,
-  "firstName": "Alex",
-  "language": [
-    {
-      "Lang":"en",
-      "level": "first"
-    },
-    {
-      "Lang":"de",
-      "level": "second"
-    }
-  ],
-  "job": {
-    "name": "ss",
-    "special": "dev"
+[
+
+  {
+    "departure": "Ternopil",
+    "arrival": "Lviv",
+    "numberOfSeats": 25,
+    "minutes": 450
+  },
+  {
+    "departure": "Ternopil",
+    "arrival": "Lviv",
+    "numberOfSeats": 25,
+    "minutes": 450
   }
-}
+
+]

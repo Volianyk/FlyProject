@@ -1,12 +1,13 @@
 package com.fly.project.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 @Builder
 @Getter
+@Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class FlightDetails {
     private String departure;
     private String arrival;

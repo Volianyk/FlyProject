@@ -1,34 +1,32 @@
-{
-  "flights": [
-    {
-      "id": 1,
-      "flightDetails": {
-        "departure": "Ternopil",
-        "arrival": "Lviv",
-        "numberOfSeats": "25",
-        "minutes": "450"
-      },
-      "departureTime": "MAX"
+[
+  {
+
+    "flightDetails": {
+      "departure": "Ternopil",
+      "arrival": "Lviv",
+      "numberOfSeats": "25",
+      "minutes": "450"
     },
-    {
-      "id": 2,
-      "flightDetails": {
-        "departure": "Lytsk",
-        "arrival": "Lviv",
-        "numberOfSeats": "285",
-        "minutes": "50"
-      },
-      "departureTime": "MAX"
+    "departureTime": "2000-12-31 23:59:59"
+  },
+  {
+
+    "flightDetails": {
+      "departure": "Lytsk",
+      "arrival": "Lviv",
+      "numberOfSeats": "285",
+      "minutes": "50"
     },
-    {
-      "id": 3,
-      "flightDetails": {
-        "departure": "Dnipro",
-        "arrival": "Odesa",
-        "numberOfSeats": "47",
-        "minutes": "180"
-      },
-      "departureTime": "MAX"
-    }
-  ]
-}
+    "departureTime": "2022-12-31 23:59:59"
+  },
+  {
+
+    "flightDetails": {
+      "departure": "Dnipro",
+      "arrival": "Odesa",
+      "numberOfSeats": "47",
+      "minutes": "180"
+    },
+    "departureTime": "2022-12-31 23:59:59"
+  }
+]
