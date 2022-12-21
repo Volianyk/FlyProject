@@ -1,0 +1,16 @@
+[
+
+  {
+    "departure": "Ternopil",
+    "arrival": "Lviv",
+    "numberOfSeats": 25,
+    "minutes": 450
+  },
+  {
+    "departure": "Ternopil",
+    "arrival": "Lviv",
+    "numberOfSeats": 25,
+    "minutes": 450
+  }
+
+]
