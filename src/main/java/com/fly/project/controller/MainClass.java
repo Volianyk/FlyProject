@@ -27,18 +27,27 @@ public class MainClass {
 // input data
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Welcome! Please enter departure airport:");
-        String departure=br.readLine();
+        String departure = br.readLine();
         System.out.println("Please enter arrived airport:");
-        String arrived=br.readLine();
+        String arrived = br.readLine();
 
         List<Flight> resultSet = flightService.searchFlight(departure, arrived, LocalDate.of(2022, 12, 31));
-        List<Ticket> tickets = reservationService.makeReservation(resultSet.get(0), List.of(Adult.builder().fullName(new Person.FullName("a", "b")).build()));
-        for (Flight flight : resultSet) {
-            System.out.println(flight);
+        if (!(resultSet.isEmpty())) {
+            for (Flight flight : resultSet) {
+                System.out.println(flight);
+            }
+        } else {
+            System.out.println("We did not find flight for the date");
         }
-        for (Ticket ticket : tickets) {
-            System.out.println(ticket);
+
+
+        if (!(resultSet.isEmpty())) {
+            List<Ticket> tickets = reservationService.makeReservation(resultSet.get(0), List.of(Adult.builder().fullName(new Person.FullName("a", "b")).build()));
+            for (Ticket ticket : tickets) {
+                System.out.println(ticket);
+            }
         }
+
 
     }
 
