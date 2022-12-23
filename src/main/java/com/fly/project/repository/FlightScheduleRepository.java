@@ -2,7 +2,6 @@ package com.fly.project.repository;
 
 import com.fly.project.model.Flight;
 import com.fly.project.repository.dataSource.FlightListDataSource;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -15,7 +14,7 @@ public class FlightScheduleRepository {
     private boolean isSameDay(LocalDateTime localDateTime, LocalDate localDate) {
         return localDateTime.getYear() == localDate.getYear() && localDateTime.getDayOfYear() == localDate.getDayOfYear();
     }
-    public List<Flight> searchFlight(String from, String to, LocalDate date) throws IOException, ParseException {
+    public List<Flight> searchFlight(String from, String to, LocalDate date) throws IOException {
 
         return FlightListDataSource.getFlightList().stream().filter(flight -> isSameDay(flight.getDepartureTime(), date))
                 .filter(flight -> flight.getFlightDetails().getDeparture().equals(from)
