@@ -6,7 +6,7 @@ import lombok.ToString;
 
 public class Adult extends Person {
     @Builder
-    public Adult(FullName fullName ) {
-        super(fullName );
+    public Adult(FullName fullName, int age ) {
+        super(fullName, age );
     }
 }

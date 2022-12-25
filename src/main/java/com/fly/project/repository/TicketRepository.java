@@ -1,6 +1,7 @@
 package com.fly.project.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fly.project.model.Ticket;
 
@@ -17,12 +18,14 @@ public class TicketRepository {
         return ticketsListToAdd;
     }
 
-    public void saveToJsonfile(List<Ticket> ticketsListToJson) throws IOException {
+    public void saveToJsonfile() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JavaTimeModule());
+        mapper.enable(SerializationFeature.INDENT_OUTPUT); //pretty print
         System.out.println("Writing Ticket to JSON file");
         System.out.println("-----------------------");
-        mapper.writeValue(new File("src/main/resources/Ticket.json"), ticketsListToJson);
+        mapper.writeValue(new File("src/main/resources/Ticket.json"), ticketList);
     }
+
 }
 

@@ -1,1 +1,18 @@
-[{"flight":{"number":102,"flightDetails":{"departure":"Lytsk","arrival":"Lviv","numberOfSeats":285,"duration":50},"departureTime":"2022-12-31 23:59:59"},"person":{"fullName":{"firstName":"a","lastName":"b"}}}]
+[ {
+  "flight" : {
+    "number" : 102,
+    "flightDetails" : {
+      "departure" : "Lytsk",
+      "arrival" : "Lviv",
+      "duration" : 50
+    },
+    "departureTime" : "2022-12-31 23:59:59"
+  },
+  "person" : {
+    "fullName" : {
+      "firstName" : "njsn",
+      "lastName" : "jvdk"
+    },
+    "age" : 10
+  }
+} ]

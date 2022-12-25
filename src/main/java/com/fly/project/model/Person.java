@@ -1,5 +1,6 @@
 package com.fly.project.model;
 
+import com.fly.project.model.enums.PersonAgeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,9 +10,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Person {
+    //private PersonAgeEnum personAgeEnum=PersonAgeEnum.a
     private FullName fullName;
     //  private String email;
-    // private int age;
+     private int age;
 
 
     @Getter

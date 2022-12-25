@@ -5,7 +5,7 @@ import lombok.Builder;
 
 public class Infant extends Person{
     private Adult associate;
-    public Infant(FullName fullName) {
-        super(fullName);
+    public Infant(FullName fullName, int age) {
+        super(fullName, age);
     }
 }
