@@ -24,14 +24,15 @@ public class MainClass {
         FlightService flightService = new FlightService(flightScheduleRepository);
         TicketRepository ticketRepository = new TicketRepository();
         ReservationService reservationService = new ReservationService(ticketRepository);
-// input data
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Welcome! Please enter departure airport:");
-        String departure = br.readLine();
-        System.out.println("Please enter arrived airport:");
-        String arrived = br.readLine();
+// input data for search
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        System.out.println("Welcome! Please enter departure airport:");
+//        String departure = br.readLine();
+//        System.out.println("Please enter arrived airport:");
+//        String arrived = br.readLine();
 
-        List<Flight> resultSet = flightService.searchFlight("Lytsk","Lviv", LocalDate.of(2022, 12, 31));
+//result of the search
+        List<Flight> resultSet = flightService.searchFlight("Lytsk", "Lviv", LocalDate.of(2022, 12, 31));
         if (!(resultSet.isEmpty())) {
             for (Flight flight : resultSet) {
                 System.out.println(flight);
@@ -39,9 +40,10 @@ public class MainClass {
         } else {
             System.out.println("We did not find flight for the date");
         }
+        //create ticket
+        System.out.println("Would you like to buy the ticket? ");
 
-
-        if (!(resultSet.isEmpty())) {
+        if ((!(resultSet.isEmpty())) && isYesNo()) {
             List<Ticket> tickets = reservationService.makeReservation(resultSet.get(0), List.of(Adult.builder().fullName(new Person.FullName("a", "b")).build()));
             for (Ticket ticket : tickets) {
                 System.out.println(ticket);
@@ -51,5 +53,16 @@ public class MainClass {
 
     }
 
+    public static boolean isYesNo() {
 
+        BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter 'yes' or 'no': ");
+        String yesNo = "null";
+        try {
+            yesNo = br1.readLine();
+        } catch (IOException e) {
+            System.out.println("You enter incorrect value!");
+        }
+        return yesNo.equalsIgnoreCase("yes");
+    }
 }

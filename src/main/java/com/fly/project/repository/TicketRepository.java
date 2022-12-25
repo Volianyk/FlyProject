@@ -12,4 +12,7 @@ public class TicketRepository {
         ticketList.addAll(ticketsListToAdd);
         return ticketsListToAdd;
     }
+    public void saveToJsonfile(List<Ticket> ticketList){
+
+    }
 }
