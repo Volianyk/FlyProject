@@ -31,7 +31,7 @@ public class MainClass {
         System.out.println("Please enter arrived airport:");
         String arrived = br.readLine();
 
-        List<Flight> resultSet = flightService.searchFlight(departure, arrived, LocalDate.of(2022, 12, 31));
+        List<Flight> resultSet = flightService.searchFlight("Lytsk","Lviv", LocalDate.of(2022, 12, 31));
         if (!(resultSet.isEmpty())) {
             for (Flight flight : resultSet) {
                 System.out.println(flight);
