@@ -48,6 +48,7 @@ public class MainClass {
             for (Ticket ticket : tickets) {
                 System.out.println(ticket);
             }
+            ticketRepository.saveToJsonfile(tickets);
         }
 
 
