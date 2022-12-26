@@ -1,6 +1,5 @@
 package com.fly.project.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 @Builder
@@ -11,7 +10,6 @@ import lombok.*;
 public class FlightDetails {
     private String departure;
     private String arrival;
-    @JsonIgnore
     private int numberOfSeats;
     private int duration;
 

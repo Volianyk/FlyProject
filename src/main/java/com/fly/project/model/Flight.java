@@ -24,6 +24,7 @@ public class Flight {
                 flightDetails +
                 "DepartureTime: " + departureTime + '\n';
     }
+
     public String toStringForTicket() {
         return "Flight number: " + number + '\n' +
                 flightDetails.toStringForTicket() +

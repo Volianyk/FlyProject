@@ -13,7 +13,6 @@ import java.util.List;
 public class FlightService {
     private FlightScheduleRepository flightScheduleRepository;
 
-
     public List<Flight> searchFlight(String from, String to, LocalDate date) throws IOException, ParseException {
         return flightScheduleRepository.searchFlight(from, to, date);
     }
