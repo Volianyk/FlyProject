@@ -1,0 +1,37 @@
+[ {
+  "flight" : {
+    "number" : 111,
+    "flightDetails" : {
+      "departure" : "Ternopil",
+      "arrival" : "Lviv",
+      "numberOfSeats" : 25,
+      "duration" : 450
+    },
+    "departureTime" : "2000-12-31 21:59:40"
+  },
+  "person" : {
+    "fullName" : {
+      "firstName" : "fhcbv",
+      "lastName" : "dc"
+    },
+    "age" : 20
+  }
+}, {
+  "flight" : {
+    "number" : 111,
+    "flightDetails" : {
+      "departure" : "Ternopil",
+      "arrival" : "Lviv",
+      "numberOfSeats" : 25,
+      "duration" : 450
+    },
+    "departureTime" : "2000-12-31 21:59:40"
+  },
+  "person" : {
+    "fullName" : {
+      "firstName" : "hvdc",
+      "lastName" : "cxf"
+    },
+    "age" : 12
+  }
+} ]
