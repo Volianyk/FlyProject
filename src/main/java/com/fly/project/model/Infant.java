@@ -2,11 +2,12 @@ package com.fly.project.model;
 
 import lombok.Builder;
 
-
-public class Infant extends Person{
+public class Infant extends Person {
     private Adult associate;
 
-    public Infant(FullName fullName) {
-        super(fullName);
+    @Builder
+    public Infant(FullName fullName, int age, Adult associate) {
+        super(fullName, age);
+        this.associate = associate;
     }
 }

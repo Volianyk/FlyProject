@@ -16,6 +16,4 @@ public class ReservationService {
         List<Ticket> ticketList = personList.stream().map(p -> Ticket.builder().flight(flight).person(p).build()).toList();
         return ticketRepository.saveTicket(ticketList);
     }
-
-
 }

@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FlightListDataSource {
-
     public static List<Flight> getFlightList() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JavaTimeModule());
